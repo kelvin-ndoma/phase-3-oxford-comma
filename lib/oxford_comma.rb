@@ -4,10 +4,11 @@ def oxford_comma(array)
     if array.length < 3
         array.join(' and ')
     else
-        array[-1] = "and #{array[-1]}"
-        array.join(", ")
+        array[-1] = array.join(", ") + " " + "and #{array[-1]}"
+        
     end
 end
+
 puts oxford_comma(["kelvin", "mutua"])
 puts oxford_comma(["kelvin", "mutua", "sfd3a"])
 puts oxford_comma(["kelvin", "mutua", "sfd3a", "student"])
